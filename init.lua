@@ -6,7 +6,9 @@ local map = vim.api.nvim_set_keymap -- Key Mapping
 require 'paq' {
 	'gruvbox-community/gruvbox',
   'vim-airline/vim-airline',
-  'tpope/vim-fugitive'
+  'tpope/vim-fugitive',
+  'nvim-lua/plenary.nvim',
+  'nvim-telescope/telescope.nvim'
 }
 
 local options = { noremap = true } 
@@ -28,3 +30,13 @@ set.termguicolors = true
 set.smartcase = true
 set.incsearch = true
 set.mouse = 'nv'
+
+-- map('n', '<leader>gcf', ':Git checkout -b feature/<cr>', options) 
+map('n', '<leader>gg', ':Git<cr>', options)
+map('n', '<leader>gc', ':Git commit<cr>', options)
+map('n', '<leader>l', ':wincmd l<cr>', options)
+map('n', '<leader>h', ':wincmd h<cr>', options)
+-- map('n', '<leader>l', ':wincmd l<cr>', options)
+-- map('n', '<leader>l', ':wincmd l<cr>', options)
+map('n', '<leader>ff', ':Telescope find_files<cr>', options) 
+map('n', '<leader>lg', ':Telescope live_grep<cr>', options) 
