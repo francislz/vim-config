@@ -10,6 +10,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'hrsh7th/nvim-cmp'
+  Plug 'kyazdani42/nvim-web-devicons' " for file icons
+  Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()
 
 lua require('init')
+
+
