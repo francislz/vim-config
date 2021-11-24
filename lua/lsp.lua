@@ -2,18 +2,22 @@
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- LSP Configs 
-require'lspconfig'.eslint.setup { 
+-- LSP Configs
+require'lspconfig'.eslint.setup {
   capabilties = capabilities,
 }
 require'lspconfig'.tsserver.setup {
-  capabilities = capailities,
+  capabilities = capabilities,
 }
 require'lspconfig'.cssls.setup {
   capabilities = capabilities,
 }
 require'lspconfig'.html.setup {
   capabilities = capabilities,
+}
+
+require'lspconfig'.vimls.setup {
+  capabilties = capabilities,
 }
 
 local system_name
@@ -31,10 +35,6 @@ end
 local sumneko_root_path = '/Users/franciscone/.config/nvim/servers/lua-language-server'
 local sumneko_binary = sumneko_root_path.."/bin/"..system_name.."/lua-language-server"
 
-local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
-
 require'lspconfig'.sumneko_lua.setup {
   cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
   settings = {
@@ -42,8 +42,6 @@ require'lspconfig'.sumneko_lua.setup {
       runtime = {
         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
         version = 'LuaJIT',
-        -- Setup your lua path
-        path = runtime_path,
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
@@ -60,3 +58,11 @@ require'lspconfig'.sumneko_lua.setup {
     },
   },
 }
+
+require "lsp_signature".setup({
+  bind = true, -- This is mandatory, otherwise border config won't get registered.
+  handler_opts = {
+    border = "rounded"
+  },
+  hint_enable = false,
+})
