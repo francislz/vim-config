@@ -23,3 +23,5 @@ map('n', '<leader>ff', ':Telescope find_files<cr>', options)
 map('n', '<leader>lg', ':Telescope live_grep<cr>', options)
 map('n', '<leader>ef', ':EslintFixAll<cr>', options)
 map('n', '<leader>pj', ':%!python -m json.tool<cr>', options)
+-- NvimTree Maps
+map('n', '<leader>tt', ':NvimTreeToggle<cr>', options)
