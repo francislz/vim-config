@@ -88,6 +88,7 @@ call plug#begin('~/.vim/plugged')
   " Functions signatures
   Plug 'ray-x/lsp_signature.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+  Plug 'folke/todo-comments.nvim'
 call plug#end()
 
 lua require('init')
