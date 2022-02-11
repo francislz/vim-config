@@ -5,7 +5,7 @@ g.mapleader = " "
 g.solarized_visibility = "high"
 g.solarized_diffmode = "low"
 
-vim.cmd 'colorscheme gruvbox'
+vim.cmd 'colorscheme aurora'
 vim.cmd 'set termguicolors'
 
 require('maps')
