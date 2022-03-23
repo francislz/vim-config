@@ -14,4 +14,4 @@ set.incsearch = true
 set.mouse = 'nv'
 set.completeopt = 'menu,menuone,noselect'
 set.relativenumber = true
-
+set.laststatus = 3
