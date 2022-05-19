@@ -7,9 +7,21 @@ g.solarized_diffmode = "low"
 
 vim.cmd 'colorscheme aurora'
 vim.cmd 'set termguicolors'
+vim.notify = require('notify')
+
+require("nvim-lsp-installer").setup({
+    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+    ui = {
+        icons = {
+            server_installed = "✓",
+            server_pending = "➜",
+            server_uninstalled = "✗"
+        }
+    }
+})
 
 require('maps')
-require('comp')
+-- require('comp')
 require('lsp')
 require('trees')
 require('tree')

@@ -25,3 +25,13 @@ map('n', '<leader>ef', ':EslintFixAll<cr>', options)
 map('n', '<leader>pj', ':%!python -m json.tool<cr>', options)
 -- NvimTree Maps
 map('n', '<leader>tt', ':NvimTreeToggle<cr>', options)
+-- NVIM Debugger maps
+map('n', '<F5>', "<Cmd>lua require'dap'.continue()<CR>", options)
+map('n', '<F10>', "<Cmd>lua require'dap'.step_over()<CR>", options)
+map('n', '<F11>', "<Cmd>lua require'dap'.step_into()<CR>", options)
+map('n', '<F12>', "<Cmd>lua require'dap'.step_out()<CR>", options)
+map('n', '<Leader>',"b <Cmd>lua require'dap'.toggle_breakpoint()<CR>", options)
+map('n', '<Leader>',"B <Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", options)
+map('n', '<Leader>',"lp <Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", options)
+map('n', '<Leader>',"dr <Cmd>lua require'dap'.repl.open()<CR>", options)
+map('n', '<Leader>',"dl <Cmd>lua require'dap'.run_last()<CR>", options)
