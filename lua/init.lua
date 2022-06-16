@@ -20,11 +20,11 @@ require("nvim-lsp-installer").setup({
     }
 })
 
+require('sets')
 require('maps')
--- require('comp')
+require('comp')
 require('lsp')
 require('trees')
 require('tree')
-require('sets')
 require('colorizer-configs')
 require('comments-highlights')

@@ -12,6 +12,6 @@ set.termguicolors = true
 set.smartcase = true
 set.incsearch = true
 set.mouse = 'nv'
-set.completeopt = 'menu,menuone,noselect'
+set.completeopt = 'menu,menuone,noinsert'
 set.relativenumber = true
 set.laststatus = 3

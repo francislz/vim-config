@@ -14,8 +14,10 @@ require'nvim-web-devicons'.setup {
  -- will get overriden by `get_icons` option
  default = true;
 }
+
 require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
   auto_reload_on_write = true,
+  create_in_closed_folder = false,
   disable_netrw       = true,
   hijack_netrw        = true,
   open_on_setup       = false,
@@ -32,6 +34,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
   open_on_setup_file = false,
   sort_by = "name",
   reload_on_bufenter = false,
+  respect_buf_cwd = false,
   view = {
     width = 40,
     height = 30,
@@ -48,6 +51,11 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     signcolumn = "yes",
   },
   renderer = {
+    highlight_opened_files = "none",
+    group_empty = false,
+    highlight_git = true,
+    root_folder_modifier = ":~",
+    add_trailing = false,
     indent_markers = {
       enable = false,
       icons = {
@@ -59,7 +67,39 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     icons = {
       webdev_colors = true,
       git_placement = "before",
+      padding = " ",
+      symlink_arrow = " ➛ ",
+      show = {
+        file = true,
+        folder = true,
+        folder_arrow = true,
+        git = true,
+      },
+      glyphs = {
+        default = "",
+        symlink = "",
+        folder = {
+          arrow_closed = "",
+          arrow_open = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
+        },
+        git = {
+          unstaged = "✗",
+          staged = "✓",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "★",
+          deleted = "",
+          ignored = "◌",
+        },
+      },
     },
+    special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
   },
   hijack_directories = {
     enable = true,
