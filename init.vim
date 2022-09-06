@@ -36,6 +36,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'williamboman/nvim-lsp-installer'
   " Debugger Adapter
   Plug 'mfussenegger/nvim-dap'
+  Plug 'mfussenegger/nvim-dap-python'
   " Notify
   Plug 'rcarriga/nvim-notify'
 call plug#end()
