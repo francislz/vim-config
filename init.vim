@@ -1,5 +1,7 @@
 " COQ autostart
 " let g:coq_settings = { 'auto_start': 'shut-up' }
+autocmd BufRead,BufNewFile * setlocal spell spelllang=en_us
+syntax match quoteblock /"[^"]\+"/ contains=@NoSpell
 
 call plug#begin('~/.vim/plugged')
   Plug 'gruvbox-community/gruvbox'
@@ -13,8 +15,6 @@ call plug#begin('~/.vim/plugged')
   " nvim-cmp
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-path'
-  Plug 'hrsh7th/cmp-vsnip'
-  Plug 'hrsh7th/vim-vsnip'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'hrsh7th/cmp-nvim-lsp'
@@ -39,7 +39,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'mfussenegger/nvim-dap-python'
   " Notify
   Plug 'rcarriga/nvim-notify'
+  " Snippets
+  " For luasnip users.
+  Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
+  Plug 'L3MON4D3/LuaSnip'
+  Plug 'saadparwaiz1/cmp_luasnip'
 call plug#end()
 
 lua require('init')
+highlight FloatBorder  ctermfg=NONE ctermbg=NONE cterm=NONE
 

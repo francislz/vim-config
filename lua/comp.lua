@@ -5,8 +5,12 @@ local lspkind = require('lspkind');
 cmp.setup({
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+      require('luasnip').lsp_expand(args.body)
     end,
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
   completion = {
     completeopt = 'menu,menuone,noinsert'
@@ -23,7 +27,7 @@ cmp.setup({
   sources = {
     { name = 'nvim_lua' },
     { name = 'nvim_lsp' },
-    { name = 'vsnip' }, -- For vsnip users.
+    { name = 'luasnip' }, -- For vsnip users.
     { name = 'path' },
     { name = 'buffer', keyword_length = 5 },
   },
