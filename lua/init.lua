@@ -5,7 +5,7 @@ g.mapleader = " "
 g.solarized_visibility = "high"
 g.solarized_diffmode = "low"
 
-vim.cmd 'colorscheme aurora'
+vim.cmd 'colorscheme panda'
 vim.cmd 'set termguicolors'
 vim.notify = require('notify')
 
@@ -30,3 +30,33 @@ require('colorizer-configs')
 require('comments-highlights')
 require('debugger')
 require('snippets')
+require('testing')
+require('dashboard')
+local codicons = require('codicons')
+codicons.setup({
+  -- Override by mapping name to icon
+  ['account'] = '',
+  -- Or by name to hexadecimal/decimal value
+  ['comment'] = 0xEA6B, -- hexadecimal
+  ['archive'] = 60056, -- decimal
+})
+
+-- local null_ls = require("null-ls")
+-- 
+-- null_ls.setup({
+--     sources = {
+--         null_ls.builtins.formatting.stylua,
+--         null_ls.builtins.diagnostics.eslint,
+--         null_ls.builtins.completion.spell,
+--     },
+-- })
+
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
