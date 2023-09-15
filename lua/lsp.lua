@@ -1,4 +1,15 @@
 local lsp = require "lspconfig"
+
+-- require("nvim-lsp-installer").setup({
+--     automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+--     ui = {
+--         icons = {
+--             server_installed = "✓",
+--             server_pending = "➜",
+--             server_uninstalled = "✗"
+--         }
+--     }
+-- })
 -- local lsp_format = require("lsp-format")
 -- lsp_format.setup {}
 
@@ -35,9 +46,12 @@ lsp.phpactor.setup {
   capabilities = capabilities,
   --on_attach = lsp_format.on_attach
 }
-lsp.sumneko_lua.setup {
+lsp.lua_ls.setup {
   capabilities = capabilities,
   --on_attach = lsp_format.on_attach
+}
+lsp.angularls.setup {
+  capabilities = capabilities,
 }
 -- require "lsp_signature".setup({
 --   bind = true, -- This is mandatory, otherwise border config won't get registered.

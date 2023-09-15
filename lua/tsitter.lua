@@ -1,5 +1,6 @@
 require'nvim-treesitter.configs'.setup {
-highlight = {
+  highlight = {
     enable = true,
-    }
+  }
 }
+require'colorizer'.setup()
