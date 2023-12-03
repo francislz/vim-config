@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
   -- use 'rebelot/kanagawa.nvim'
   -- use 'nvim-lualine/lualine.nvim'
   -- use 'vim-airline/vim-airline'
-  -- use 'tpope/vim-fugitive'
+  use 'tpope/vim-fugitive'
   -- use 'markvincze/panda-vim'
   -- LSP Config
   use 'neovim/nvim-lspconfig'
