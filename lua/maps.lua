@@ -26,7 +26,7 @@ map('n', '<leader>ff', ':Telescope find_files<cr>', options)
 map('n', '<leader>lg', ':Telescope live_grep<cr>', options)
 map('n', '<leader>ef', ':EslintFixAll<cr>', options)
 map('n', '<leader>pj', ':%!python3 -m json.tool<cr>', options)
--- NvimTree Maps
+-- NvimTree Maps>
 map('n', '<leader>e', ':NvimTreeToggle<cr>', options)
 -- NVIM Debugger maps
 map('n', '<F5>', "<Cmd>lua require('dap').continue()<CR>", options)
@@ -48,3 +48,9 @@ map('n', "<leader>td", "<cmd>lua require('neotest').run.run({strategy = 'dap'})<
 -- Next greate remaps
 map('n', "<leader>y", "\"+y", options)
 map('v', "<leader>y", "\"+y", options)
+-- Rafactoring maps
+map('n', "<leader>y", "\"+y", options)
+map('n', "<leader>rr", "<cmd>lua require('telescope').extensions.refactoring.refactors()<cr>", options)
+map("n","<leader>rp","<cmd>lua require('refactoring').debug.printf({below = false})<cr>", options)
+map('n', "<leader>rv", "<cmd>lua require('refactoring').debug.print_var()<cr>", options)
+

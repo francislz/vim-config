@@ -83,7 +83,7 @@ return require('packer').startup(function(use)
   -- use 'jose-elias-alvarez/null-ls.nvim'
   -- use 'mfussenegger/nvim-lint'
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.3',
+    'nvim-telescope/telescope.nvim',
     requires = { 'nvim-lua/plenary.nvim' }
   }
   -- Dashboard
@@ -91,6 +91,16 @@ return require('packer').startup(function(use)
     'goolord/alpha-nvim',
     requires = {
       'ahmedkhalf/project.nvim',
+    }
+  }
+  -- Vim Training
+  use 'ThePrimeagen/vim-be-good'
+  -- Rafactoring
+  use {
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+        {"nvim-lua/plenary.nvim"},
+        {"nvim-treesitter/nvim-treesitter"}
     }
   }
 end)

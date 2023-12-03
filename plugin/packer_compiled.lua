@@ -204,6 +204,11 @@ _G.packer_plugins = {
     path = "/home/whistleblower/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  ["refactoring.nvim"] = {
+    loaded = true,
+    path = "/home/whistleblower/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
+    url = "https://github.com/ThePrimeagen/refactoring.nvim"
+  },
   ["telescope-dap.nvim"] = {
     loaded = true,
     path = "/home/whistleblower/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
@@ -218,6 +223,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/whistleblower/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/whistleblower/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   }
 }
 
