@@ -28,8 +28,8 @@ cmp.setup({
     { name = 'nvim_lua' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' }, -- For vsnip users.
-    { name = 'path' },
     { name = 'buffer', keyword_length = 5 },
+    { name = 'path' },
   },
   formatting = {
     format = lspkind.cmp_format {

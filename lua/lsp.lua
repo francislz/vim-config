@@ -1,5 +1,14 @@
 local lsp = require "lspconfig"
 
+vim.filetype.add {
+  extension = {
+    jinja = 'jinja',
+    jinja2 = 'jinja',
+    j2 = 'jinja',
+  },
+}
+
+
 -- require("nvim-lsp-installer").setup({
 --     automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
 --     ui = {
@@ -52,6 +61,10 @@ lsp.lua_ls.setup {
 }
 lsp.angularls.setup {
   capabilities = capabilities,
+}
+lsp.jinja_lsp.setup {
+  capabilities = capabilities,
+  --on_attach = lsp_format.on_attach
 }
 -- require "lsp_signature".setup({
 --   bind = true, -- This is mandatory, otherwise border config won't get registered.

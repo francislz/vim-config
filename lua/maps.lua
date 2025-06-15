@@ -7,6 +7,7 @@ map('n', '<leader>gd', ':lua vim.lsp.buf.definition()<cr>', options)
 map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<cr>', options)
 map('n', '<leader>dw', ':lua vim.diagnostic.open_float()<cr>', options)
 map('n', '<leader>ca', ':lua vim.lsp.buf.code_action()<CR>', options)
+map('n', '<leader>vt', ':lua vim.lsp.buf.hover()<CR>', options)
 -- Fugitive Mapping
 map('n', '<leader>gg', ':Git<cr>', options)
 map('n', '<leader>gc', ':Git commit<cr>', options)

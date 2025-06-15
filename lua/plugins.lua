@@ -4,6 +4,8 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+  -- Copilot
+  use 'github/copilot.vim'
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   -- -- Formatting
